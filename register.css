@@ -1,0 +1,59 @@
+   body {
+      background: #181818 url('https://fconline.garena.vn/wp-content/uploads/2025/04/bell.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .register-container {
+      background: #ffffff;
+      padding: 2rem 2.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+      width: 100%;
+      max-width: 350px;
+    }
+    .register-container h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #0d0e0e;
+      font-weight: 700;
+    }
+    .form-control {
+      background: #ffffff;
+      color: #fff;
+      border: none;
+    }
+    .form-control:focus {
+      background: #fffefe;
+      color: #fff;
+      border-color: #00ff99;
+      box-shadow: none;
+    }
+    .btn-register {
+      background: #007bff;
+      color: #ffffff;
+      font-weight: 600;
+      border: none;
+      width: 100%;
+      margin-top: 1rem;
+    }
+    .btn-register:hover {
+      background: #0056b3;
+      color: #fff;
+    }
+    .register-footer {
+      text-align: center;
+      margin-top: 1.5rem;
+      font-size: 0.95rem;
+      color: #aaa;
+    }
+    a {
+      color: #00ff99;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
