@@ -1,0 +1,488 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header Styles */
+header {
+    background-color: #000;
+    border-bottom: 1px solid #333;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #fff;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    padding: 0 5px;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+nav ul li a:hover {
+    opacity: 1;
+    color: #ff9c00;
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-icons span {
+    cursor: pointer;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.header-icons span:hover {
+    opacity: 1;
+    color: #ff9c00;
+}
+
+/* Main Content Styles */
+main h1 {
+    text-align: center;
+    margin: 50px 0 60px;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-bottom: 80px;
+}
+
+.team-member-card {
+    background-color: #111;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.team-member-card:hover {
+    transform: translateY(-10px);
+}
+
+.team-member-card:hover .member-photo {
+    opacity: 0.8;
+}
+
+.member-photo {
+    width: 100%;
+    height: 400px;
+    display: block;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.member-info-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.2), transparent);
+    z-index: 2;
+}
+
+.name-role {
+    text-align: left;
+}
+
+.member-name {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #fff;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.member-role {
+    font-size: 0.9em;
+    color: #ddd;
+    margin-bottom: 5px;
+}
+
+.member-region {
+    font-size: 0.85em;
+    color: #aaa;
+}
+
+.flash-logo-small {
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #ff9c00;
+    background: rgba(255, 156, 0, 0.15);
+    padding: 8px 12px;
+    border-radius: 4px;
+    white-space: nowrap;
+    border: 1px solid rgba(255, 156, 0, 0.3);
+}
+
+.member-social {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 3;
+}
+
+.member-social i {
+    font-size: 1.8em;
+    color: #4267B2;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.member-social i:hover {
+    transform: scale(1.3);
+    color: #365899;
+}
+
+/* Partners Section */
+.partners-section {
+    margin: 80px 0;
+    padding: 60px 40px;
+    background: #111;
+    border-radius: 8px;
+}
+
+.partners-section h2 {
+    font-size: 2em;
+    color: #fff;
+    margin-bottom: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.partners-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 40px;
+    align-items: center;
+}
+
+.partner-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.partner-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.partner-logo:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+/* Other Teams Section */
+.other-teams-section {
+    margin: 80px 0;
+    padding: 60px 40px;
+    background: #0a0a0a;
+}
+
+.other-teams-section h2 {
+    font-size: 2em;
+    color: #fff;
+    margin-bottom: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.teams-showcase {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.team-showcase-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    border: 2px solid #333;
+    height: 200px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.team-showcase-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.team-showcase-item:hover {
+    border-color: #ff9c00;
+    transform: scale(1.02);
+}
+
+.team-showcase-item:hover img {
+    transform: scale(1.1);
+}
+
+.team-name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.8);
+    color: #fff;
+    padding: 12px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Footer */
+footer {
+    background: #0a0a0a;
+    color: #fff;
+    padding: 60px 40px 0;
+    border-top: 1px solid #333;
+    margin-top: 80px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-section h4 {
+    color: #ff9c00;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.about-us {
+    font-size: 12px;
+    line-height: 1.8;
+    color: #aaa;
+}
+
+.footer-logo {
+    font-size: 24px;
+    color: #ff9c00;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.about-us p {
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 12px;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: #ff9c00;
+    opacity: 1;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    font-size: 18px;
+}
+
+.social-icons i {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.social-icons i:hover {
+    color: #ff9c00;
+    transform: scale(1.2);
+}
+
+.footer-bottom {
+    border-top: 1px solid #333;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: #666;
+}
+
+.payment-methods {
+    display: flex;
+    gap: 15px;
+    font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .team-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+    
+    .teams-showcase {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    
+    nav ul {
+        gap: 15px;
+        font-size: 12px;
+    }
+    
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    main h1 {
+        font-size: 1.8em;
+        margin: 30px 0 40px;
+    }
+    
+    .member-photo {
+        height: 300px;
+    }
+    
+    .partners-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+    }
+    
+    .teams-showcase {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    main h1 {
+        font-size: 1.5em;
+        margin: 20px 0 30px;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .partners-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .member-photo {
+        height: 250px;
+    }
+}
