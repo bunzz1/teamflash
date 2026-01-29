@@ -2,33 +2,40 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <title>Đăng ký - TEAM FLASH</title>
-    <link rel="icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/vi/3/3b/Team_Flash_logo.png">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Đăng ký - TEAM FLASH</title>
+  <link rel="icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/vi/3/3b/Team_Flash_logo.png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="register.css">
+  <link rel="stylesheet" href="login.css">
 </head>
 <body>
-  <form action="login_form_action.html">
-  <div class="register-container">
+  <div class="login-box">
     <h2>Đăng ký</h2>
-    <form>
-      <div class="mb-3">
-        <label for="name" class="form-label">Tên của bạn</label>
-        <input type="text" class="form-control" id="name" name="name" placeholder="Nhập tên" required autocomplete="name">
-      </div>
+    <form id="loginForm">
       <div class="mb-3">
         <label for="email" class="form-label">Email</label>
-        <input type="email" class="form-control" id="email" name="email" placeholder="Nhập email" required autocomplete="email">
+        <input type="email" id="email" class="form-control" placeholder="Nhập email" required>
       </div>
       <div class="mb-3">
         <label for="password" class="form-label">Mật khẩu</label>
-        <input type="password" class="form-control" id="password" name="password" placeholder="Nhập mật khẩu" required autocomplete="new-password">
+        <input type="password" id="password" class="form-control" placeholder="Nhập mật khẩu" required>
       </div>
-      <button type="submit" class="btn btn-register">Đăng ký</button>
+      <div class="mb-3">
+        <label for="confirm-password" class="form-label">Xác nhận mật khẩu</label>
+        <input type="password" id="confirm-password" class="form-control" placeholder="Nhập lại mật khẩu" required>
+        </div>
+      <button type="submit" class="btn btn-login">Đăng ký</button>
     </form>
-    <div class="register-footer">
-      Đã có tài khoản? <a href="index.html">Đăng nhập</a>
+    <div class="login-footer">
+      Nếu bạn đã có tài khoản? <a href="index.html">Đăng nhập</a>
     </div>
   </div>
+  <script>
+    // Khi bấm đăng nhập -> chuyển trang
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      window.location.href = "home.html"; // 👉 đổi "home.html" sang trang bạn muốn
+    });
+  </script>
 </body>
+</html>
